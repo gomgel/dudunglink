@@ -18,7 +18,7 @@ time flutter pub get
 echo "🟩 Install CocoaPods via Homebrew"
 time HOMEBREW_NO_AUTO_UPDATE=1 brew install cocoapods
 
-echo "🟩 Install CocoaPods dependencies..."
+echo "🟩 Install CocoaPods dependencies...@PWD"
 time cd ios && pod install
 
 exit 0
