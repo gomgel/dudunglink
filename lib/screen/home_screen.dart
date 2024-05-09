@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -15,6 +16,20 @@ class _HomeScreenState extends State<HomeScreen> {
     ..setBackgroundColor(const Color(0x00000000))
     ..setNavigationDelegate(
       NavigationDelegate(
+        onNavigationRequest: (request) async {
+          if (request.url.startsWith('https://dudunglink.com')) {
+            return NavigationDecision.navigate;
+          } else {
+            final Uri url = Uri.parse(request.url);
+            if (await canLaunchUrl(url)) {
+              await launchUrl(url);
+            } else {
+              throw 'Could not launch ${request.url}';
+            }
+            return NavigationDecision.prevent;
+          }
+
+        },
         onProgress: (int progress) {
           // Update loading bar.
         },
@@ -33,9 +48,16 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: WebViewWidget(controller: controller)
-      ),
+      body: SafeArea(child: WebViewWidget(controller: controller)),
     );
   }
+
+  // launchUrl(String url) async {
+  //   final Uri url0 = Uri.parse(url);
+  //   if (await canLaunchUrl(url0)) {
+  //     await launchUrl(url);
+  //   } else {
+  //     throw 'Could not launch $url0';
+  //   }
+  // }
 }

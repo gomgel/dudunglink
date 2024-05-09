@@ -20,6 +20,14 @@
 		<data>
 		QdhFnT1JCloabZLRuFu1SmW8ozk=
 		</data>
+		<key>flutter_native_splash_privacy.bundle/Info.plist</key>
+		<data>
+		j1+Ebqq1KKwXTgrpcDdWhr65gdk=
+		</data>
+		<key>flutter_native_splash_privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		/LX0ZlwxwIAIhjZaDB8EiH5KpXA=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -42,6 +50,20 @@
 			<key>hash2</key>
 			<data>
 			M/oynsrQ5rAVOh/AWPFKUWru71ONrtRhanP/k8Gzi8U=
+			</data>
+		</dict>
+		<key>flutter_native_splash_privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			YCkkIwNIxvoJwrAaVVjis2VSg058SjHVerqBm1yweS8=
+			</data>
+		</dict>
+		<key>flutter_native_splash_privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			bS2g2NkwIn1CjB2TY7CtbjoS4sm2jFzilxWKdBL8jDE=
 			</data>
 		</dict>
 	</dict>
