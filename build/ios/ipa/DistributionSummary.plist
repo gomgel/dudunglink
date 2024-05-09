@@ -12,7 +12,7 @@
 			<key>bitcode</key>
 			<false/>
 			<key>buildNumber</key>
-			<string>1</string>
+			<string>2</string>
 			<key>certificate</key>
 			<dict>
 				<key>SHA1</key>
@@ -32,7 +32,7 @@
 					<key>bitcode</key>
 					<false/>
 					<key>buildNumber</key>
-					<string>1</string>
+					<string>2</string>
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
@@ -64,7 +64,7 @@
 					<key>bitcode</key>
 					<false/>
 					<key>buildNumber</key>
-					<string>1</string>
+					<string>2</string>
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
@@ -96,7 +96,7 @@
 					<key>bitcode</key>
 					<false/>
 					<key>buildNumber</key>
-					<string>1</string>
+					<string>2</string>
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
@@ -128,7 +128,39 @@
 					<key>bitcode</key>
 					<false/>
 					<key>buildNumber</key>
-					<string>1</string>
+					<string>2</string>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>E689A26C3F6D9C0A7D8B63A988B3B7A4B0D2DA18</string>
+						<key>dateExpires</key>
+						<string>2025/04/16</string>
+						<key>type</key>
+						<string>Cloud Managed Apple Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>url_launcher_ios.framework</string>
+					<key>symbols</key>
+					<true/>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>TCZQ7XNHA8</string>
+						<key>name</key>
+						<string>NPLEY Co., Ltd.</string>
+					</dict>
+					<key>versionNumber</key>
+					<string>1.0.0</string>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>bitcode</key>
+					<false/>
+					<key>buildNumber</key>
+					<string>2</string>
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>

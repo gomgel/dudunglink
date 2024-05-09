@@ -8,9 +8,32 @@
 		<data>
 		PwmHoHMSF7KiLkds9pcvqQEc/hs=
 		</data>
+		<key>flutter_native_splash_privacy.bundle/Info.plist</key>
+		<data>
+		iiqdH+3I0JLdBz5DsaxuhOdUrLQ=
+		</data>
+		<key>flutter_native_splash_privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		/LX0ZlwxwIAIhjZaDB8EiH5KpXA=
+		</data>
 	</dict>
 	<key>files2</key>
-	<dict/>
+	<dict>
+		<key>flutter_native_splash_privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			AJ44kGgTmIVXIdmzI/RJzPVPLI1D3WBA7lPBUKbOx9o=
+			</data>
+		</dict>
+		<key>flutter_native_splash_privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			bS2g2NkwIn1CjB2TY7CtbjoS4sm2jFzilxWKdBL8jDE=
+			</data>
+		</dict>
+	</dict>
 	<key>rules</key>
 	<dict>
 		<key>^.*</key>
