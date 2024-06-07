@@ -14,6 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
   var controller = WebViewController()
     ..setJavaScriptMode(JavaScriptMode.unrestricted)
     ..setBackgroundColor(const Color(0x00000000))
+    ..setUserAgent('random')
     ..setNavigationDelegate(
       NavigationDelegate(
         onNavigationRequest: (request) async {
@@ -28,7 +29,6 @@ class _HomeScreenState extends State<HomeScreen> {
             }
             return NavigationDecision.prevent;
           }
-
         },
         onProgress: (int progress) {
           // Update loading bar.
@@ -47,9 +47,29 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(child: WebViewWidget(controller: controller)),
+
+    // return Scaffold(
+    //   body: SafeArea(child: WebViewWidget(controller: controller, )),
+    // );
+
+    return PopScope(
+      onPopInvoked: (bi) {
+        controller.goBack();
+        print('go back');
+      },
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: SafeArea(
+          child: WebViewWidget(
+            controller: controller,
+          ),
+        ),
+      ),
     );
+
+    // return Scaffold(
+    //   body: SafeArea(child: WebViewWidget(controller: controller, )),
+    // );
   }
 
   // launchUrl(String url) async {
