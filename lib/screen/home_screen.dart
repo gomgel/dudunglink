@@ -58,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
         print('go back');
       },
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: const Color(0x00000000),
         body: SafeArea(
           child: WebViewWidget(
             controller: controller,
