@@ -253,7 +253,6 @@ using UInt = size_t;
 
 #if defined(__OBJC__)
 
-
 @protocol FlutterPluginRegistrar;
 
 SWIFT_CLASS("_TtC16url_launcher_ios17URLLauncherPlugin")
@@ -525,7 +524,6 @@ using UInt = size_t;
 #endif
 
 #if defined(__OBJC__)
-
 
 @protocol FlutterPluginRegistrar;
 
