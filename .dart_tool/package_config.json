@@ -104,6 +104,12 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "flutter_inappwebview",
+      "rootUri": "file:///Users/siwoo/.pub-cache/hosted/pub.dev/flutter_inappwebview-5.8.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "flutter_launcher_icons",
       "rootUri": "file:///Users/siwoo/.pub-cache/hosted/pub.dev/flutter_launcher_icons-0.13.1",
       "packageUri": "lib/",
@@ -374,7 +380,7 @@
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2024-07-22T09:31:43.808467Z",
+  "generated": "2024-07-23T08:18:37.824263Z",
   "generator": "pub",
   "generatorVersion": "3.3.4"
 }
