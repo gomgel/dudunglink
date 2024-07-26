@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		uZMf3fJlyJhAepQHkVj95d3+FiA=
+		CDPyCNXtR3CI0rOmo9xkuOyhXo4=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		hZ0J15PBRCspXa1XFu0Wyah8UKw=
+		N5yNRYbLDSuyuJ24ZgpXFPsdhHo=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		YnsG60psfZ7Or54WgSpqAypJR/Q=
+		5YJE7ONw3IOpX59bWXpy4Pq1WeI=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -230,7 +230,7 @@
 		</data>
 		<key>Frameworks/flutter_inappwebview.framework/flutter_inappwebview</key>
 		<data>
-		/proEcVRuRiP7n6UcNpOSqXlEzs=
+		w+M3eKRI6l2MkyafiNBxSrcnWtw=
 		</data>
 		<key>Frameworks/flutter_native_splash.framework/Info.plist</key>
 		<data>
@@ -377,7 +377,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			f9YUL1WMgc9U3rteFiM43f4MG4GcWPfh/LBe2KL6Mf0=
+			57OA+7u7MJ3dNVtoTNTTKSfYOdFXU5LiJxM2dRtdpZk=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -391,7 +391,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6VHldH0kertzz1cK2gvHy6yHhufJW14LPW6iicY/53M=
+			RUfqvmiuqmnPX1PE58Eyhjl8VOU8uDwOwNBCoFtkCg4=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
@@ -440,7 +440,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Iwlok8IW9LEDtkC4Bmop1ECmoKCAB1vNdgcI1Ptmly8=
+			azdEpwPRPpmtvSszVtfBdifdx5M3LRJrC0n+i2r6gwk=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -699,7 +699,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JEz/Nq/G0hMGIZZzSDbkHt4BGHJsmY6W56tZ1IScF5g=
+			Y8SiinIXRuUE6/VAwtmCJf1y4fzWaMsPBcqQYLXz0RE=
 			</data>
 		</dict>
 		<key>Frameworks/flutter_native_splash.framework/Info.plist</key>

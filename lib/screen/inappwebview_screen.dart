@@ -11,7 +11,6 @@ class InAppWebViewScreen extends StatefulWidget {
 }
 
 class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
-
   var safeAreaColor = Colors.white;
   var currentUrl = "https://dudunglink.com/";
 
@@ -28,18 +27,28 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
     pullToRefreshController = (kIsWeb
         ? null
         : PullToRefreshController(
-      options: PullToRefreshOptions(
-        color: Colors.blue,
-      ),
-      onRefresh: () async {
-        if (defaultTargetPlatform == TargetPlatform.android) {
-          webViewController.reload();
-        } else if (defaultTargetPlatform == TargetPlatform.iOS || defaultTargetPlatform == TargetPlatform.macOS) {
-          webViewController.loadUrl(urlRequest: URLRequest(url: await webViewController.getUrl()));
-        }
-      },
-    ))!;
+            options: PullToRefreshOptions(
+              color: Colors.grey,
+            ),
+            onRefresh: () async {
+              if (defaultTargetPlatform == TargetPlatform.android) {
+                webViewController.reload();
+              } else if (defaultTargetPlatform == TargetPlatform.iOS || defaultTargetPlatform == TargetPlatform.macOS) {
+                webViewController.loadUrl(urlRequest: URLRequest(url: await webViewController.getUrl()));
+              }
+            },
+          ))!;
   }
+
+  // @override
+  // Widget build(BuildContext context) {
+  //   return Scaffold(
+  //     body: SafeArea(
+  //         child: Center(
+  //       child: Text('test'),
+  //     )),
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -47,11 +56,12 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
 
     return Scaffold(
         backgroundColor: safeAreaColor,
+
         body: SafeArea(
             child: PopScope(
                 onPopInvoked: (bi) => _goBack(context),
                 child: Column(children: <Widget>[
-                  progress < 1.0 ? LinearProgressIndicator(value: progress, color: Colors.blue) : Container(),
+                  //progress < 1.0 ? LinearProgressIndicator(value: progress, color: Colors.blue) : Container(),
                   Expanded(
                       child: Stack(children: [
                         InAppWebView(
@@ -161,70 +171,6 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
                             return true;
                           },
 
-                          // onCreateWindow: (controller, createWindowAction) async {
-                          //   // create a headless WebView using the createWindowAction.windowId to get the correct URL
-                          //   HeadlessInAppWebView? headlessWebView;
-                          //   headlessWebView = HeadlessInAppWebView(
-                          //     windowId: createWindowAction.windowId,
-                          //     onLoadStart: (controller, url) async {
-                          //       if (url != null) {
-                          //         InAppBrowser.openWithSystemBrowser(url: url); // to open with the system browser
-                          //         // or use the https://pub.dev/packages/url_launcher plugin
-                          //       }
-                          //       // dispose it immediately
-                          //       await headlessWebView?.dispose();
-                          //       headlessWebView = null;
-                          //     },
-                          //   );
-                          //   headlessWebView?.run();
-                          //
-                          //   // return true to tell that we are handling the new window creation action
-                          //   return true;
-                          // },
-                          // onCreateWindow: (controller, createWindowRequest) async {
-                          //   showDialog(
-                          //     context: context,
-                          //     builder: (context) {
-                          //       return InAppWebView(
-                          //             // Setting the windowId property is important here!
-                          //             windowId: createWindowRequest.windowId,
-                          //             initialOptions: InAppWebViewGroupOptions(
-                          //               android: AndroidInAppWebViewOptions(
-                          //                 builtInZoomControls: true,
-                          //                 thirdPartyCookiesEnabled: true,
-                          //               ),
-                          //               crossPlatform: InAppWebViewOptions(
-                          //                 cacheEnabled: true,
-                          //                 javaScriptEnabled: true,
-                          //                 userAgent: 'random',
-                          //               ),
-                          //               ios: IOSInAppWebViewOptions(
-                          //                 allowsInlineMediaPlayback: true,
-                          //                 allowsBackForwardNavigationGestures: true,
-                          //               ),
-                          //             ),
-                          //             onCloseWindow: (controller) async {
-                          //               if (Navigator.canPop(context)) {
-                          //                 Navigator.pop(context);
-                          //               }
-                          //             },
-                          //           );
-                          //
-                          //     },
-                          //   );
-                          //   return true;
-                          // },
-                          //   shouldOverrideUrlLoading: (controller, shouldOverrideUrlLoadingRequest) async {
-                          //     var url = shouldOverrideUrlLoadingRequest.request.url;
-                          //     var uri = Uri.parse(url.toString());
-                          //
-                          //     if ((uri.toString()).contains('YOUR_URL')) {
-                          //       return NavigationActionPolicy.ALLOW;
-                          //     } else {
-                          //       launchUrl(uri);
-                          //       return NavigationActionPolicy.CANCEL;
-                          //     }
-                          //   }
                         )
                       ]))
                 ]))));
