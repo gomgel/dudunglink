@@ -25,15 +25,15 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
   void initState() {
     super.initState();
 
-    Future.delayed(const Duration(seconds: 5), () {
-      SystemChrome.setEnabledSystemUIMode(
-        SystemUiMode.manual,
-        overlays: [
-          //SystemUiOverlay.bottom,
-          SystemUiOverlay.top,
-        ],
-      );
-    });
+    // Future.delayed(const Duration(seconds: 5), () {
+    //   SystemChrome.setEnabledSystemUIMode(
+    //     SystemUiMode.manual,
+    //     overlays: [
+    //       //SystemUiOverlay.bottom,
+    //       SystemUiOverlay.top,
+    //     ],
+    //   );
+    // });
 
     pullToRefreshController = (kIsWeb
         ? null
