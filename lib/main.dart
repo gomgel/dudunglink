@@ -15,24 +15,32 @@ void main() async {
     DeviceOrientation.portraitDown,
   ]);
 
-
-
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   await Future.delayed(const Duration(seconds: 3));
   FlutterNativeSplash.remove();
 
-  await SystemChrome.setEnabledSystemUIMode(
-    SystemUiMode.manual,
-    overlays: [
-      SystemUiOverlay.bottom,
-      SystemUiOverlay.top,
-    ],
-  );
+  Future.delayed(const Duration(seconds: 5), () {
+    SystemChrome.setEnabledSystemUIMode(
+      SystemUiMode.manual,
+      overlays: [
+        SystemUiOverlay.bottom,
+        SystemUiOverlay.top,
+      ],
+    );
+  });
+
+  // await SystemChrome.setEnabledSystemUIMode(
+  //   SystemUiMode.manual,
+  //   overlays: [
+  //     SystemUiOverlay.bottom,
+  //     SystemUiOverlay.top,
+  //   ],
+  // );
 
   runApp(
     MaterialApp(
-      debugShowCheckedModeBanner: false,
+      //debugShowCheckedModeBanner: false,
       home: InAppWebViewScreen(),
     ),
   );
