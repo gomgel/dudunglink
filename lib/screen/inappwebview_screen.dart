@@ -42,11 +42,18 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
               color: Colors.grey.withOpacity(.5),
             ),
             onRefresh: () async {
-              if (defaultTargetPlatform == TargetPlatform.android) {
-                webViewController.reload();
-              } else if (defaultTargetPlatform == TargetPlatform.iOS || defaultTargetPlatform == TargetPlatform.macOS) {
-                webViewController.loadUrl(urlRequest: URLRequest(url: await webViewController.getUrl()));
-              }
+
+              final refreshUrl = await webViewController.getUrl();
+
+              setState(
+                () {
+                  if (defaultTargetPlatform == TargetPlatform.android) {
+                    webViewController.reload();
+                  } else if (defaultTargetPlatform == TargetPlatform.iOS || defaultTargetPlatform == TargetPlatform.macOS) {
+                    webViewController.loadUrl(urlRequest: URLRequest(url: refreshUrl));
+                  }
+                },
+              );
             },
           ))!;
   }
@@ -67,16 +74,18 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
 
     return Scaffold(
       backgroundColor: safeAreaColor,
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        SystemChrome.setEnabledSystemUIMode(
-          SystemUiMode.manual,
-          overlays: [
-            //SystemUiOverlay.bottom,
-            SystemUiOverlay.top,
-          ],
-        );
-      },
-      child: Icon(Icons.add),),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          SystemChrome.setEnabledSystemUIMode(
+            SystemUiMode.manual,
+            overlays: [
+              //SystemUiOverlay.bottom,
+              SystemUiOverlay.top,
+            ],
+          );
+        },
+        child: Icon(Icons.add),
+      ),
       body: SafeArea(
         child: PopScope(
           onPopInvoked: (bi) => _goBack(context),
