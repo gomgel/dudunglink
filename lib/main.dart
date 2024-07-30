@@ -20,15 +20,15 @@ void main() async {
   await Future.delayed(const Duration(seconds: 3));
   FlutterNativeSplash.remove();
 
-  Future.delayed(const Duration(seconds: 5), () {
-    SystemChrome.setEnabledSystemUIMode(
-      SystemUiMode.manual,
-      overlays: [
-        SystemUiOverlay.bottom,
-        SystemUiOverlay.top,
-      ],
-    );
-  });
+  // Future.delayed(const Duration(seconds: 5), () {
+  //   SystemChrome.setEnabledSystemUIMode(
+  //     SystemUiMode.manual,
+  //     overlays: [
+  //       SystemUiOverlay.bottom,
+  //       SystemUiOverlay.top,
+  //     ],
+  //   );
+  // });
 
   // await SystemChrome.setEnabledSystemUIMode(
   //   SystemUiMode.manual,
