@@ -1,8 +1,8 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.npley.dudung"
-4    android:versionCode="2"
-5    android:versionName="1.0.0" >
+4    android:versionCode="11"
+5    android:versionName="2.0.0" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="19"
@@ -124,26 +124,111 @@
 76-->/Volumes/project/study/flutter_ui/dudung_first/android/app/src/main/AndroidManifest.xml:36:13-30
 77
 78        <activity
-78-->[:url_launcher_android] /Volumes/project/study/flutter_ui/dudung_first/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:9-13:74
-79            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
-79-->[:url_launcher_android] /Volumes/project/study/flutter_ui/dudung_first/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-74
-80            android:exported="false"
-80-->[:url_launcher_android] /Volumes/project/study/flutter_ui/dudung_first/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:12:13-37
-81            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-81-->[:url_launcher_android] /Volumes/project/study/flutter_ui/dudung_first/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:13:13-71
-82
-83        <uses-library
-83-->[androidx.window:window:1.0.0-beta04] /Users/siwoo/.gradle/caches/transforms-3/cc5bad0ed8e76ce4cfc4c687e304cead/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
-84            android:name="androidx.window.extensions"
-84-->[androidx.window:window:1.0.0-beta04] /Users/siwoo/.gradle/caches/transforms-3/cc5bad0ed8e76ce4cfc4c687e304cead/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
-85            android:required="false" />
-85-->[androidx.window:window:1.0.0-beta04] /Users/siwoo/.gradle/caches/transforms-3/cc5bad0ed8e76ce4cfc4c687e304cead/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
-86        <uses-library
-86-->[androidx.window:window:1.0.0-beta04] /Users/siwoo/.gradle/caches/transforms-3/cc5bad0ed8e76ce4cfc4c687e304cead/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
-87            android:name="androidx.window.sidecar"
-87-->[androidx.window:window:1.0.0-beta04] /Users/siwoo/.gradle/caches/transforms-3/cc5bad0ed8e76ce4cfc4c687e304cead/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
-88            android:required="false" />
-88-->[androidx.window:window:1.0.0-beta04] /Users/siwoo/.gradle/caches/transforms-3/cc5bad0ed8e76ce4cfc4c687e304cead/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
-89    </application>
-90
-91</manifest>
+78-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:16:9-20:47
+79            android:name="com.pichillilorenzo.flutter_inappwebview.in_app_browser.InAppBrowserActivity"
+79-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:17:13-104
+80            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
+80-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:18:13-137
+81            android:exported="false"
+81-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:19:13-37
+82            android:theme="@style/AppTheme" />
+82-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:20:13-44
+83        <activity
+83-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:21:9-24:55
+84            android:name="com.pichillilorenzo.flutter_inappwebview.chrome_custom_tabs.ChromeCustomTabsActivity"
+84-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:22:13-112
+85            android:exported="false"
+85-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:23:13-37
+86            android:theme="@style/ThemeTransparent" />
+86-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:24:13-52
+87        <activity
+87-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:25:9-28:55
+88            android:name="com.pichillilorenzo.flutter_inappwebview.chrome_custom_tabs.TrustedWebActivity"
+88-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:26:13-106
+89            android:exported="false"
+89-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:27:13-37
+90            android:theme="@style/ThemeTransparent" />
+90-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:28:13-52
+91        <activity
+91-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:29:9-33:55
+92            android:name="com.pichillilorenzo.flutter_inappwebview.chrome_custom_tabs.ChromeCustomTabsActivitySingleInstance"
+92-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:30:13-126
+93            android:exported="false"
+93-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:31:13-37
+94            android:launchMode="singleInstance"
+94-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:32:13-48
+95            android:theme="@style/ThemeTransparent" />
+95-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:33:13-52
+96        <activity
+96-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:34:9-38:55
+97            android:name="com.pichillilorenzo.flutter_inappwebview.chrome_custom_tabs.TrustedWebActivitySingleInstance"
+97-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:35:13-120
+98            android:exported="false"
+98-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:36:13-37
+99            android:launchMode="singleInstance"
+99-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:37:13-48
+100            android:theme="@style/ThemeTransparent" />
+100-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:38:13-52
+101
+102        <receiver
+102-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:40:9-43:40
+103            android:name="com.pichillilorenzo.flutter_inappwebview.chrome_custom_tabs.ActionBroadcastReceiver"
+103-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:41:13-111
+104            android:enabled="true"
+104-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:42:13-35
+105            android:exported="false" />
+105-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:43:13-37
+106
+107        <meta-data
+107-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:45:9-47:36
+108            android:name="io.flutter.embedded_views_preview"
+108-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:46:13-61
+109            android:value="true" />
+109-->[:flutter_inappwebview] /Volumes/project/study/flutter_ui/dudung_first/build/flutter_inappwebview/intermediates/merged_manifest/release/AndroidManifest.xml:47:13-33
+110
+111        <activity
+111-->[:url_launcher_android] /Volumes/project/study/flutter_ui/dudung_first/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:9-13:74
+112            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+112-->[:url_launcher_android] /Volumes/project/study/flutter_ui/dudung_first/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-74
+113            android:exported="false"
+113-->[:url_launcher_android] /Volumes/project/study/flutter_ui/dudung_first/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:12:13-37
+114            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+114-->[:url_launcher_android] /Volumes/project/study/flutter_ui/dudung_first/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:13:13-71
+115
+116        <uses-library
+116-->[androidx.window:window:1.0.0-beta04] /Users/siwoo/.gradle/caches/transforms-3/cc5bad0ed8e76ce4cfc4c687e304cead/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+117            android:name="androidx.window.extensions"
+117-->[androidx.window:window:1.0.0-beta04] /Users/siwoo/.gradle/caches/transforms-3/cc5bad0ed8e76ce4cfc4c687e304cead/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+118            android:required="false" />
+118-->[androidx.window:window:1.0.0-beta04] /Users/siwoo/.gradle/caches/transforms-3/cc5bad0ed8e76ce4cfc4c687e304cead/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+119        <uses-library
+119-->[androidx.window:window:1.0.0-beta04] /Users/siwoo/.gradle/caches/transforms-3/cc5bad0ed8e76ce4cfc4c687e304cead/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+120            android:name="androidx.window.sidecar"
+120-->[androidx.window:window:1.0.0-beta04] /Users/siwoo/.gradle/caches/transforms-3/cc5bad0ed8e76ce4cfc4c687e304cead/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+121            android:required="false" />
+121-->[androidx.window:window:1.0.0-beta04] /Users/siwoo/.gradle/caches/transforms-3/cc5bad0ed8e76ce4cfc4c687e304cead/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+122
+123        <provider
+123-->[androidx.emoji2:emoji2:1.2.0] /Users/siwoo/.gradle/caches/transforms-3/97ad1a071d54533a6fb6c5f7e9c342c4/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+124            android:name="androidx.startup.InitializationProvider"
+124-->[androidx.emoji2:emoji2:1.2.0] /Users/siwoo/.gradle/caches/transforms-3/97ad1a071d54533a6fb6c5f7e9c342c4/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+125            android:authorities="com.npley.dudung.androidx-startup"
+125-->[androidx.emoji2:emoji2:1.2.0] /Users/siwoo/.gradle/caches/transforms-3/97ad1a071d54533a6fb6c5f7e9c342c4/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+126            android:exported="false" >
+126-->[androidx.emoji2:emoji2:1.2.0] /Users/siwoo/.gradle/caches/transforms-3/97ad1a071d54533a6fb6c5f7e9c342c4/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+127            <meta-data
+127-->[androidx.emoji2:emoji2:1.2.0] /Users/siwoo/.gradle/caches/transforms-3/97ad1a071d54533a6fb6c5f7e9c342c4/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+128                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+128-->[androidx.emoji2:emoji2:1.2.0] /Users/siwoo/.gradle/caches/transforms-3/97ad1a071d54533a6fb6c5f7e9c342c4/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+129                android:value="androidx.startup" />
+129-->[androidx.emoji2:emoji2:1.2.0] /Users/siwoo/.gradle/caches/transforms-3/97ad1a071d54533a6fb6c5f7e9c342c4/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+130            <meta-data
+130-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/siwoo/.gradle/caches/transforms-3/17a785215b154e933bc6f0938c7f517a/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+131                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+131-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/siwoo/.gradle/caches/transforms-3/17a785215b154e933bc6f0938c7f517a/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+132                android:value="androidx.startup" />
+132-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/siwoo/.gradle/caches/transforms-3/17a785215b154e933bc6f0938c7f517a/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+133        </provider>
+134    </application>
+135
+136</manifest>
