@@ -48,7 +48,10 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
               if (defaultTargetPlatform == TargetPlatform.android) {
                 webViewController.reload();
               } else if (defaultTargetPlatform == TargetPlatform.iOS || defaultTargetPlatform == TargetPlatform.macOS) {
-                webViewController.loadUrl(urlRequest: URLRequest(url: refreshUrl));
+                debugPrint('TargetPlatform.iOS');
+                webViewController
+                    .loadUrl(urlRequest: URLRequest(url: Uri.parse('about:blank')))
+                    .then((value) => webViewController.loadUrl(urlRequest: URLRequest(url: refreshUrl)));
               }
             },
           ))!;
@@ -77,6 +80,7 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
           if (defaultTargetPlatform == TargetPlatform.android) {
             webViewController.reload();
           } else if (defaultTargetPlatform == TargetPlatform.iOS || defaultTargetPlatform == TargetPlatform.macOS) {
+            debugPrint('TargetPlatform.iOS');
             webViewController.loadUrl(urlRequest: URLRequest(url: refreshUrl));
           }
         },
@@ -114,6 +118,7 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
                     ios: IOSInAppWebViewOptions(
                       allowsInlineMediaPlayback: true,
                       allowsBackForwardNavigationGestures: true,
+                      disallowOverScroll: true,
                     ),
                   ),
                   pullToRefreshController: pullToRefreshController,
