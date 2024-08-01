@@ -73,19 +73,6 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
 
     return Scaffold(
       backgroundColor: safeAreaColor,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          final refreshUrl = await webViewController.getUrl();
-
-          if (defaultTargetPlatform == TargetPlatform.android) {
-            webViewController.reload();
-          } else if (defaultTargetPlatform == TargetPlatform.iOS || defaultTargetPlatform == TargetPlatform.macOS) {
-            debugPrint('TargetPlatform.iOS');
-            webViewController.loadUrl(urlRequest: URLRequest(url: refreshUrl));
-          }
-        },
-        child: Icon(Icons.add),
-      ),
       body: SafeArea(
         child: PopScope(
           onPopInvoked: (bi) => _goBack(context),
