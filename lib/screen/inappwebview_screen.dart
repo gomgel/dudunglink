@@ -41,9 +41,15 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
                 debugPrint('TargetPlatform.iOS');
                 //webViewController.loadUrl(urlRequest: URLRequest(url: refreshUrl));
 
-                webViewController
-                    .loadUrl(urlRequest: URLRequest(url: Uri.parse('about:blank')))
-                    .then((value) => webViewController.loadUrl(urlRequest: URLRequest(url: refreshUrl)));
+                setState(() {
+                  webViewController.scrollTo(x: 0, y: 0);
+
+                  webViewController
+                      .loadUrl(urlRequest: URLRequest(url: Uri.parse('about:blank')))
+                      .then((value) => webViewController.loadUrl(urlRequest: URLRequest(url: refreshUrl)));
+                });
+
+
               }
             },
           ))!;
@@ -65,6 +71,11 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
 
     return Scaffold(
       backgroundColor: safeAreaColor,
+      floatingActionButton: FloatingActionButton(onPressed: (){
+        setState(() {
+          webViewController.scrollTo(x: 0, y: 0);
+        });
+      }, child: Icon(Icons.menu),),
       body: SafeArea(
         child: PopScope(
           onPopInvoked: (bi) => _goBack(context),
@@ -136,6 +147,7 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
                     });
                   },
                   onProgressChanged: (controller, progress) {
+
                     if (progress == 100) {
                       pullToRefreshController.endRefreshing();
                     }
