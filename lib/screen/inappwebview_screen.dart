@@ -172,6 +172,9 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
 
                     return;
                   },
+                  shouldOverrideUrlLoading: (controller, action) async {
+                    return NavigationActionPolicy.ALLOW;
+                  },
                   onLoadStart: (InAppWebViewController controller, uri) {
                     setState(() {
                       myUrl = uri!;
@@ -204,6 +207,9 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
 
                     // return true to tell that we are handling the new window creation action
                     return true;
+                  },
+                  onReceivedServerTrustAuthRequest: (controller, challenge) async{
+                    return ServerTrustAuthResponse(action: ServerTrustAuthResponseAction.PROCEED);
                   },
                 ),
               ),
