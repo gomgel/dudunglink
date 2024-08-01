@@ -26,16 +26,6 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
   void initState() {
     super.initState();
 
-    // Future.delayed(const Duration(seconds: 5), () {
-    //   SystemChrome.setEnabledSystemUIMode(
-    //     SystemUiMode.manual,
-    //     overlays: [
-    //       //SystemUiOverlay.bottom,
-    //       SystemUiOverlay.top,
-    //     ],
-    //   );
-    // });
-
     pullToRefreshController = (kIsWeb
         ? null
         : PullToRefreshController(
@@ -49,6 +39,8 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
                 webViewController.reload();
               } else if (defaultTargetPlatform == TargetPlatform.iOS || defaultTargetPlatform == TargetPlatform.macOS) {
                 debugPrint('TargetPlatform.iOS');
+                //webViewController.loadUrl(urlRequest: URLRequest(url: refreshUrl));
+
                 webViewController
                     .loadUrl(urlRequest: URLRequest(url: Uri.parse('about:blank')))
                     .then((value) => webViewController.loadUrl(urlRequest: URLRequest(url: refreshUrl)));
@@ -105,19 +97,15 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
                     ios: IOSInAppWebViewOptions(
                       allowsInlineMediaPlayback: true,
                       allowsBackForwardNavigationGestures: true,
-                      disallowOverScroll: true,
                     ),
                   ),
                   pullToRefreshController: pullToRefreshController,
                   onUpdateVisitedHistory: (controller, url, androidIsReload) {
-                    debugPrint('onupdate');
                     debugPrint(url!.toString());
 
                     if (url!.toString().contains('https://dudunglink.com/s/link')) {
-                      debugPrint('true');
                       if (this.safeAreaColor == Colors.black87) {
                       } else {
-                        debugPrint('color changed...');
                         setState(() {
                           this.safeAreaColor = Colors.black87;
                           this.currentUrl = url.host;

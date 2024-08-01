@@ -12,7 +12,6 @@ class _TestScreenState extends State<TestScreen> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(onTap : (){setState(() {
-      debugPrint('test');
       FlutterNativeSplash.remove();
     });}, child: Scaffold(backgroundColor : Colors.yellow, body: SafeArea(child: Center(child: Text('test'),),),));
   }
