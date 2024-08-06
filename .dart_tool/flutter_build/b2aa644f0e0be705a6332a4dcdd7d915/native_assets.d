@@ -1,0 +1,1 @@
+ /Volumes/project/study/flutter_ui/dudung_first/.dart_tool/flutter_build/b2aa644f0e0be705a6332a4dcdd7d915/native_assets.yaml: 

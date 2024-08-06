@@ -20,7 +20,7 @@ void main() async {
 
 
 
-  await Future.delayed(const Duration(seconds: 3));
+  await Future.delayed(const Duration(milliseconds: 500));
   FlutterNativeSplash.remove();
 
   if (defaultTargetPlatform == TargetPlatform.android)

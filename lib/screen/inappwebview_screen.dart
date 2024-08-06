@@ -13,7 +13,10 @@ class InAppWebViewScreen extends StatefulWidget {
   State<InAppWebViewScreen> createState() => _InAppWebViewScreenState();
 }
 
-class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
+class _InAppWebViewScreenState extends State<InAppWebViewScreen>  {
+
+  late final AppLifecycleListener _listener;
+
   static const _actionTitles = ['do test 01', 'do test 02', 'do test 03'];
 
   var safeAreaColor = Colors.white;
@@ -46,6 +49,19 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
   void initState() {
     super.initState();
 
+    _listener = AppLifecycleListener(
+      onShow: () => _handleTransition('show'),
+      onResume: () => _handleTransition('resume'),
+      onHide: () => _handleTransition('hide'),
+      onInactive: () => _handleTransition('inactive'),
+      onPause: () => _handleTransition('pause'),
+      onDetach: () => _handleTransition('detach'),
+      onRestart: () => _handleTransition('restart'),
+      // This fires for each state change. Callbacks above fire only for
+      // specific state transitions.
+      //onStateChange: _handleStateChange,
+    );
+
     pullToRefreshController = (kIsWeb
         ? null
         : PullToRefreshController(
@@ -73,6 +89,12 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
           ))!;
   }
 
+  @override
+  void dispose() {
+    _listener.dispose();
+    super.dispose();
+  }
+
   // @override
   // Widget build(BuildContext context) {
   //   return Scaffold(
@@ -83,12 +105,25 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
   //   );
   // }
 
+  void _handleTransition(String name) {
+    debugPrint(name);
+    // setState(() {
+    //   _states.add(name);
+    // });
+    // _scrollController.animateTo(
+    //   _scrollController.position.maxScrollExtent,
+    //   duration: const Duration(milliseconds: 200),
+    //   curve: Curves.easeOut,
+    // );
+  }
+
   @override
   Widget build(BuildContext context) {
     Uri myUrl = Uri.parse(currentUrl);
 
     return Scaffold(
       backgroundColor: safeAreaColor,
+      resizeToAvoidBottomInset: true,
       // floatingActionButton: ExpandableFab(
       //   distance: 112,
       //   children: [
@@ -220,118 +255,7 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen> {
     );
   }
 
-  //   return Scaffold(
-  //     backgroundColor: safeAreaColor,
-  //     body: SafeArea(
-  //       child: PopScope(
-  //         onPopInvoked: (bi) => _goBack(context),
-  //         child: Column(
-  //           children: <Widget>[
-  //             //progress < 1.0 ? LinearProgressIndicator(value: progress, color: Colors.blue) : Container(),
-  //             Expanded(
-  //               child: Stack(
-  //                 children: [
-  //                   InAppWebView(
-  //                     key: webViewKey,
-  //                     initialUrlRequest: URLRequest(url: myUrl),
-  //                     initialOptions: InAppWebViewGroupOptions(
-  //                       crossPlatform: InAppWebViewOptions(
-  //                         javaScriptCanOpenWindowsAutomatically: true,
-  //                         javaScriptEnabled: true,
-  //                         useOnDownloadStart: true,
-  //                         useOnLoadResource: true,
-  //                         useShouldOverrideUrlLoading: true,
-  //                         mediaPlaybackRequiresUserGesture: true,
-  //                         allowFileAccessFromFileURLs: true,
-  //                         allowUniversalAccessFromFileURLs: true,
-  //                         verticalScrollBarEnabled: true,
-  //                         userAgent: 'random',
-  //                       ),
-  //                       android: AndroidInAppWebViewOptions(
-  //                           useHybridComposition: true,
-  //                           allowContentAccess: true,
-  //                           builtInZoomControls: true,
-  //                           thirdPartyCookiesEnabled: true,
-  //                           allowFileAccess: true,
-  //                           supportMultipleWindows: true),
-  //                       ios: IOSInAppWebViewOptions(
-  //                         allowsInlineMediaPlayback: true,
-  //                         allowsBackForwardNavigationGestures: true,
-  //                       ),
-  //                     ),
-  //                     pullToRefreshController: pullToRefreshController,
-  //                     onUpdateVisitedHistory: (controller, url, androidIsReload) {
-  //                       debugPrint('onupdate');
-  //                       debugPrint(url!.toString());
-  //
-  //                       if (url!.toString().contains('https://dudunglink.com/s/link')) {
-  //                         debugPrint('true');
-  //                         if (this.safeAreaColor == Colors.black87) {
-  //                         } else {
-  //                           debugPrint('color changed...');
-  //                           setState(() {
-  //                             this.safeAreaColor = Colors.black87;
-  //                             this.currentUrl = url.host;
-  //                           });
-  //                         }
-  //                       } else {
-  //                         debugPrint('false');
-  //
-  //                         if (this.safeAreaColor == Colors.white) {
-  //                         } else {
-  //                           setState(() {
-  //                             this.safeAreaColor = Colors.white;
-  //                             this.currentUrl = url.host;
-  //                           });
-  //                         }
-  //                       }
-  //
-  //                       return;
-  //
-  //                     },
-  //                     onLoadStart: (InAppWebViewController controller, uri) {
-  //                       setState(() {
-  //                         myUrl = uri!;
-  //                       });
-  //                     },
-  //                     onLoadStop: (InAppWebViewController controller, uri) {
-  //                       setState(() {
-  //                         myUrl = uri!;
-  //                       });
-  //                     },
-  //                     onProgressChanged: (controller, progress) {
-  //                       if (progress == 100) {
-  //                         pullToRefreshController.endRefreshing();
-  //                       }
-  //                       setState(() {
-  //                         this.progress = progress / 100;
-  //                       });
-  //                     },
-  //                     androidOnPermissionRequest: (controller, origin, resources) async {
-  //                       return PermissionRequestResponse(resources: resources, action: PermissionRequestResponseAction.GRANT);
-  //                     },
-  //                     onWebViewCreated: (InAppWebViewController controller) {
-  //                       webViewController = controller;
-  //                     },
-  //                     onCreateWindow: (controller, createWindowAction) async {
-  //                       var url = createWindowAction.request.url;
-  //                       var uri = Uri.parse(url.toString());
-  //
-  //                       launchUrl(uri);
-  //
-  //                       // return true to tell that we are handling the new window creation action
-  //                       return true;
-  //                     },
-  //                   )
-  //                 ],
-  //               ),
-  //             )
-  //           ],
-  //         ),
-  //       ),
-  //     ),
-  //   );
-  // }
+
 
   Future<bool> _goBack(BuildContext context) async {
     if (await webViewController.canGoBack()) {
