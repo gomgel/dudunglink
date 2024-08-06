@@ -117,13 +117,14 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen>  {
     // );
   }
 
+
   @override
   Widget build(BuildContext context) {
     Uri myUrl = Uri.parse(currentUrl);
 
     return Scaffold(
       backgroundColor: safeAreaColor,
-      resizeToAvoidBottomInset: true,
+      resizeToAvoidBottomInset: false,
       // floatingActionButton: ExpandableFab(
       //   distance: 112,
       //   children: [
@@ -148,6 +149,7 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen>  {
       //   ],
       // ),
       body: SafeArea(
+        maintainBottomViewPadding: true,
         child: PopScope(
           onPopInvoked: (bi) => _goBack(context),
           child: Column(
