@@ -22,6 +22,8 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen>  {
   var safeAreaColor = Colors.white;
   var currentUrl = "https://dudunglink.com/";
 
+  var pauseTime = DateTime.now();
+
   final GlobalKey webViewKey = GlobalKey();
 
   late final InAppWebViewController webViewController;
@@ -54,9 +56,37 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen>  {
       onResume: () => _handleTransition('resume'),
       onHide: () => _handleTransition('hide'),
       onInactive: () => _handleTransition('inactive'),
-      onPause: () => _handleTransition('pause'),
+      onPause: () {
+        _handleTransition('pause');
+        pauseTime = DateTime.now();
+      },
       onDetach: () => _handleTransition('detach'),
-      onRestart: () => _handleTransition('restart'),
+      onRestart: () async{
+        _handleTransition('restart - ${DateTime.now().difference(pauseTime).inMinutes.toString()}');
+
+
+        //backgroud 로 프로그램을 보내고 재시작 시 10분을 초과 하면 화면 전체를 다시 그려주자..
+        if (DateTime.now().difference(pauseTime).inMinutes > 10) {
+
+        }
+            _handleTransition('setState()..');
+            final refreshUrl = await webViewController.getUrl();
+
+            if (defaultTargetPlatform == TargetPlatform.android) {
+              webViewController.reload();
+            } else if (defaultTargetPlatform == TargetPlatform.iOS || defaultTargetPlatform == TargetPlatform.macOS) {
+              //debugPrint('TargetPlatform.iOS');
+              //webViewController.loadUrl(urlRequest: URLRequest(url: refreshUrl));
+
+              setState(() {
+                webViewController.scrollTo(x: 0, y: 0);
+
+                webViewController
+                    .loadUrl(urlRequest: URLRequest(url: Uri.parse('about:blank')))
+                    .then((value) => webViewController.loadUrl(urlRequest: URLRequest(url: refreshUrl)));
+              });
+        }
+      },
       // This fires for each state change. Callbacks above fire only for
       // specific state transitions.
       //onStateChange: _handleStateChange,
@@ -170,6 +200,7 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen>  {
                       allowUniversalAccessFromFileURLs: true,
                       verticalScrollBarEnabled: true,
                       userAgent: 'random',
+                      transparentBackground: true,
                     ),
                     android: AndroidInAppWebViewOptions(
                         useHybridComposition: true,
