@@ -1,6 +1,11 @@
 # This is a generated file; do not edit or check into version control.
 flutter_inappwebview=/Users/siwoo/.pub-cache/hosted/pub.dev/flutter_inappwebview-5.8.0/
 flutter_native_splash=/Users/siwoo/.pub-cache/hosted/pub.dev/flutter_native_splash-2.4.0/
+permission_handler=/Users/siwoo/.pub-cache/hosted/pub.dev/permission_handler-11.3.1/
+permission_handler_android=/Users/siwoo/.pub-cache/hosted/pub.dev/permission_handler_android-12.0.8/
+permission_handler_apple=/Users/siwoo/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5/
+permission_handler_html=/Users/siwoo/.pub-cache/hosted/pub.dev/permission_handler_html-0.1.2/
+permission_handler_windows=/Users/siwoo/.pub-cache/hosted/pub.dev/permission_handler_windows-0.2.1/
 url_launcher=/Users/siwoo/.pub-cache/hosted/pub.dev/url_launcher-6.3.0/
 url_launcher_android=/Users/siwoo/.pub-cache/hosted/pub.dev/url_launcher_android-6.3.2/
 url_launcher_ios=/Users/siwoo/.pub-cache/hosted/pub.dev/url_launcher_ios-6.3.1/

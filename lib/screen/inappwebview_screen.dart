@@ -6,6 +6,25 @@ import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:math' as math;
 
+// Hi,
+// Finally I got a solution.
+//
+// In manifest file added the following,
+// <meta-data android:name="flutterEmbedding" android:value="2" />
+//
+// And in MainActivity.kt changed into the following,
+//
+// import androidx.annotation.NonNull;
+// import io.flutter.embedding.android.FlutterActivity
+// import io.flutter.embedding.engine.FlutterEngine
+// import io.flutter.plugins.GeneratedPluginRegistrant
+//
+// class MainActivity: FlutterActivity() {
+//   override fun configureFlutterEngine(@NonNull flutterEngine: FlutterEngine) {
+//     GeneratedPluginRegistrant.registerWith(flutterEngine);
+//   }
+// }
+
 class InAppWebViewScreen extends StatefulWidget {
   const InAppWebViewScreen({Key? key}) : super(key: key);
 
@@ -154,7 +173,7 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen>  {
 
     return Scaffold(
       backgroundColor: safeAreaColor,
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: defaultTargetPlatform == TargetPlatform.android ? true : false,
       // floatingActionButton: ExpandableFab(
       //   distance: 112,
       //   children: [
@@ -203,6 +222,7 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen>  {
                       transparentBackground: true,
                     ),
                     android: AndroidInAppWebViewOptions(
+
                         useHybridComposition: true,
                         allowContentAccess: true,
                         builtInZoomControls: true,
@@ -276,6 +296,7 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen>  {
                     // return true to tell that we are handling the new window creation action
                     return true;
                   },
+
                   onReceivedServerTrustAuthRequest: (controller, challenge) async{
                     return ServerTrustAuthResponse(action: ServerTrustAuthResponseAction.PROCEED);
                   },

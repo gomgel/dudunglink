@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter/services.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 //key password : havefun
 void main() async {
@@ -23,8 +24,12 @@ void main() async {
   await Future.delayed(const Duration(milliseconds: 500));
   FlutterNativeSplash.remove();
 
-  if (defaultTargetPlatform == TargetPlatform.android)
+  if (defaultTargetPlatform == TargetPlatform.android) {
     await AndroidInAppWebViewController.setWebContentsDebuggingEnabled(true);
+    await Permission.camera.request();
+    //await Permission.storage.request();
+    await Permission.photos.request();
+  }
 
 
   // Future.delayed(const Duration(seconds: 5), () {

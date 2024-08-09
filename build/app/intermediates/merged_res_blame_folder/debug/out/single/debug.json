@@ -1,66 +1,154 @@
 [
     {
-        "merged": "com.npley.dudung.app-merged_res-28:/drawable_background.png.flat",
-        "source": "com.npley.dudung.app-main-22:/drawable/background.png"
+        "merged": "com.npley.dudung.app-merged_res-28:/drawable-xxhdpi_android12splash.png.flat",
+        "source": "com.npley.dudung.app-main-22:/drawable-xxhdpi/android12splash.png"
     },
     {
-        "merged": "com.npley.dudung.app-merged_res-28:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "com.npley.dudung.app-main-22:/mipmap-xhdpi/ic_launcher.png"
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/drawable_background.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/drawable/background.png"
     },
     {
-        "merged": "com.npley.dudung.app-merged_res-28:/mipmap-xhdpi_launcher_icon.png.flat",
-        "source": "com.npley.dudung.app-main-22:/mipmap-xhdpi/launcher_icon.png"
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/drawable-night-xxxhdpi_android12splash.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/drawable-night-xxxhdpi/android12splash.png"
     },
     {
-        "merged": "com.npley.dudung.app-merged_res-28:/drawable_launch_background.xml.flat",
-        "source": "com.npley.dudung.app-main-22:/drawable/launch_background.xml"
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/drawable-night-mdpi_android12splash.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/drawable-night-mdpi/android12splash.png"
     },
     {
-        "merged": "com.npley.dudung.app-merged_res-28:/mipmap-hdpi_launcher_icon.png.flat",
-        "source": "com.npley.dudung.app-main-22:/mipmap-hdpi/launcher_icon.png"
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/drawable-v21_background.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/drawable-v21/background.png"
     },
     {
-        "merged": "com.npley.dudung.app-merged_res-28:/drawable-v21_background.png.flat",
-        "source": "com.npley.dudung.app-main-22:/drawable-v21/background.png"
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/drawable-night-hdpi_android12splash.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/drawable-night-hdpi/android12splash.png"
     },
     {
-        "merged": "com.npley.dudung.app-merged_res-28:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "com.npley.dudung.app-main-22:/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "com.npley.dudung.app-merged_res-28:/drawable-xhdpi_android12splash.png.flat",
+        "source": "com.npley.dudung.app-main-22:/drawable-xhdpi/android12splash.png"
     },
     {
-        "merged": "com.npley.dudung.app-merged_res-28:/drawable-night-v21_launch_background.xml.flat",
-        "source": "com.npley.dudung.app-main-22:/drawable-night-v21/launch_background.xml"
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/drawable-night-v21_background.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/drawable-night-v21/background.png"
     },
     {
-        "merged": "com.npley.dudung.app-merged_res-28:/mipmap-mdpi_launcher_icon.png.flat",
-        "source": "com.npley.dudung.app-main-22:/mipmap-mdpi/launcher_icon.png"
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/drawable_launch_background.xml.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/drawable/launch_background.xml"
     },
     {
-        "merged": "com.npley.dudung.app-merged_res-28:/mipmap-xxxhdpi_launcher_icon.png.flat",
-        "source": "com.npley.dudung.app-main-22:/mipmap-xxxhdpi/launcher_icon.png"
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/drawable-night_launch_background.xml.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/drawable-night/launch_background.xml"
     },
     {
-        "merged": "com.npley.dudung.app-merged_res-28:/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "com.npley.dudung.app-main-22:/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/drawable-hdpi_android12splash.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/drawable-hdpi/android12splash.png"
     },
     {
-        "merged": "com.npley.dudung.app-merged_res-28:/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "com.npley.dudung.app-main-22:/mipmap-mdpi/ic_launcher.png"
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "com.npley.dudung.app-merged_res-28:/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "com.npley.dudung.app-main-22:/mipmap-hdpi/ic_launcher.png"
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/drawable-mdpi_android12splash.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/drawable-mdpi/android12splash.png"
     },
     {
-        "merged": "com.npley.dudung.app-merged_res-28:/mipmap-xxhdpi_launcher_icon.png.flat",
-        "source": "com.npley.dudung.app-main-22:/mipmap-xxhdpi/launcher_icon.png"
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/drawable-xhdpi_android12splash.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/drawable-xhdpi/android12splash.png"
     },
     {
-        "merged": "com.npley.dudung.app-merged_res-28:/drawable-night_launch_background.xml.flat",
-        "source": "com.npley.dudung.app-main-22:/drawable-night/launch_background.xml"
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/mipmap-mdpi_launcher_icon.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/mipmap-mdpi/launcher_icon.png"
     },
     {
-        "merged": "com.npley.dudung.app-merged_res-28:/drawable-v21_launch_background.xml.flat",
-        "source": "com.npley.dudung.app-main-22:/drawable-v21/launch_background.xml"
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/drawable-xxxhdpi_android12splash.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/drawable-xxxhdpi/android12splash.png"
+    },
+    {
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/drawable-v21_launch_background.xml.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/drawable-v21/launch_background.xml"
+    },
+    {
+        "merged": "com.npley.dudung.app-merged_res-28:/drawable-night-xxxhdpi_android12splash.png.flat",
+        "source": "com.npley.dudung.app-main-22:/drawable-night-xxxhdpi/android12splash.png"
+    },
+    {
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/drawable-night-xxhdpi_android12splash.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/drawable-night-xxhdpi/android12splash.png"
+    },
+    {
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/mipmap-hdpi_launcher_icon.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/mipmap-hdpi/launcher_icon.png"
+    },
+    {
+        "merged": "com.npley.dudung.app-merged_res-28:/drawable-night-xhdpi_android12splash.png.flat",
+        "source": "com.npley.dudung.app-main-22:/drawable-night-xhdpi/android12splash.png"
+    },
+    {
+        "merged": "com.npley.dudung.app-merged_res-28:/drawable-night-mdpi_android12splash.png.flat",
+        "source": "com.npley.dudung.app-main-22:/drawable-night-mdpi/android12splash.png"
+    },
+    {
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/drawable-night_background.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/drawable-night/background.png"
+    },
+    {
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.npley.dudung.app-merged_res-28:/drawable-night-hdpi_android12splash.png.flat",
+        "source": "com.npley.dudung.app-main-22:/drawable-night-hdpi/android12splash.png"
+    },
+    {
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/mipmap-xhdpi_launcher_icon.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/mipmap-xhdpi/launcher_icon.png"
+    },
+    {
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/drawable-xxhdpi_android12splash.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/drawable-xxhdpi/android12splash.png"
+    },
+    {
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/drawable-night-xhdpi_android12splash.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/drawable-night-xhdpi/android12splash.png"
+    },
+    {
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/drawable-night-v21_launch_background.xml.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/drawable-night-v21/launch_background.xml"
+    },
+    {
+        "merged": "com.npley.dudung.app-merged_res-28:/drawable-xxxhdpi_android12splash.png.flat",
+        "source": "com.npley.dudung.app-main-22:/drawable-xxxhdpi/android12splash.png"
+    },
+    {
+        "merged": "com.npley.dudung.app-merged_res-28:/drawable-night-xxhdpi_android12splash.png.flat",
+        "source": "com.npley.dudung.app-main-22:/drawable-night-xxhdpi/android12splash.png"
+    },
+    {
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/mipmap-xxxhdpi_launcher_icon.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/mipmap-xxxhdpi/launcher_icon.png"
+    },
+    {
+        "merged": "com.npley.dudung.app-merged_res-28:/drawable-hdpi_android12splash.png.flat",
+        "source": "com.npley.dudung.app-main-22:/drawable-hdpi/android12splash.png"
+    },
+    {
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/mipmap-xxhdpi_launcher_icon.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/mipmap-xxhdpi/launcher_icon.png"
+    },
+    {
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.npley.dudung.app-merged_res-28:/drawable-mdpi_android12splash.png.flat",
+        "source": "com.npley.dudung.app-main-22:/drawable-mdpi/android12splash.png"
+    },
+    {
+        "merged": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-merged_res-28:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/siwoo/.gradle/daemon/7.5/com.npley.dudung.app-main-22:/mipmap-mdpi/ic_launcher.png"
     }
 ]

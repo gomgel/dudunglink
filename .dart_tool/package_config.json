@@ -206,6 +206,42 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "permission_handler",
+      "rootUri": "file:///Users/siwoo/.pub-cache/hosted/pub.dev/permission_handler-11.3.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "permission_handler_android",
+      "rootUri": "file:///Users/siwoo/.pub-cache/hosted/pub.dev/permission_handler_android-12.0.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "permission_handler_apple",
+      "rootUri": "file:///Users/siwoo/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "permission_handler_html",
+      "rootUri": "file:///Users/siwoo/.pub-cache/hosted/pub.dev/permission_handler_html-0.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "permission_handler_platform_interface",
+      "rootUri": "file:///Users/siwoo/.pub-cache/hosted/pub.dev/permission_handler_platform_interface-4.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "permission_handler_windows",
+      "rootUri": "file:///Users/siwoo/.pub-cache/hosted/pub.dev/permission_handler_windows-0.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "petitparser",
       "rootUri": "file:///Users/siwoo/.pub-cache/hosted/pub.dev/petitparser-6.0.2",
       "packageUri": "lib/",
@@ -380,7 +416,7 @@
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2024-08-07T01:52:40.332085Z",
+  "generated": "2024-08-09T07:21:11.044241Z",
   "generator": "pub",
   "generatorVersion": "3.3.4"
 }
