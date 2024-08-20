@@ -55,6 +55,8 @@
 			<true/>
 			<key>NSAllowsArbitraryLoadsInWebContent</key>
 			<true/>
+		    <key>ITSAppUsesNonExemptEncryption</key>
+            <false/>
 		</dict>
 	</dict>
 </plist>
