@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/flutter_inappwebview.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		LDdAX6vM3QIBrGlphXu/mZWp70E=
+		M+SgprAH7S/eyejqAtVvWZ8APQY=
 		</data>
 		<key>Modules/flutter_inappwebview.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/flutter_inappwebview.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		wSjXeWeCk+03wGqWLIPa6IGysZg=
+		yqL7neFpMhgspNRN7RXiWlMe5rw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -128,7 +128,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			euRdietxlHtOmtTdGslZF1m96Ui8lX7Ba071V0maODY=
+			poryU3JezoEfPRkLUwAaQINk94hnt9BPQQZE6v3Wipg=
 			</data>
 		</dict>
 		<key>Modules/flutter_inappwebview.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -149,7 +149,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WmgY9hnblsPJwfPPvbmijoPXKNnwnsXCoDbosEnRDls=
+			1h31zuoEiiaBpBcQaiUGyJaQlQ0H0euddKwarpUt2jQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
