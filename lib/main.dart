@@ -27,11 +27,10 @@ void main() async {
   if (defaultTargetPlatform == TargetPlatform.android) {
     await AndroidInAppWebViewController.setWebContentsDebuggingEnabled(true);
     await Permission.camera.request();
-    //await Permission.storage.request();
     await Permission.photos.request();
   } else if (defaultTargetPlatform == TargetPlatform.iOS) {
-    await Permission.camera.request();
     await Permission.photos.request();
+    await Permission.camera.request();
   }
 
 
