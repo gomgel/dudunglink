@@ -31,6 +31,7 @@ void main() async {
     await Permission.photos.request();
   } else if (defaultTargetPlatform == TargetPlatform.iOS) {
     await Permission.camera.request();
+    await Permission.photos.request();
   }
 
 
