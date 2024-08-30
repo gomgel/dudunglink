@@ -31,6 +31,7 @@ void main() async {
   } else if (defaultTargetPlatform == TargetPlatform.iOS) {
     await Permission.photos.request();
     await Permission.camera.request();
+    await Permission.microphone.request();
   }
 
 
