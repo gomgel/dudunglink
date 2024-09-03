@@ -60,3 +60,25 @@ void main() async {
     ),
   );
 }
+
+
+
+/*
+* iOS 빌드 캐시 삭제
+      cd ios
+      rm Podfile.lock
+      rm Podfile
+      rm -rf Pods
+
+      pod cache clean --all
+
+*flutter 캐시 삭제 및 dependency 재설치
+      cd .. (상위 폴더로 되돌아가기)
+      flutter clean
+      flutter pub get
+
+*pod 재설치
+    cd ios
+    pod install
+*
+* */
