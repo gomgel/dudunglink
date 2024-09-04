@@ -116,27 +116,13 @@ class _HomeScreenState extends State<HomeScreen> {
     return PopScope(
       onPopInvoked: (bi) {
         controller.goBack();
-        debugPrint('go back');
       },
       child: Scaffold(
         backgroundColor: safeAreaColor,
         extendBodyBehindAppBar: true,
         appBar: null,
         body: SafeArea(
-          child: SmartRefresher(
-            enablePullDown: true,
-            enablePullUp: false,
-            controller: _refreshController,
-            header:  WaterDropHeader(),
-            onRefresh: () {
-              controller.reload();
-              _refreshController.refreshCompleted();
-            },
-            onLoading: (){
-              _refreshController.loadComplete();
-            },
-            child: WebViewWidget(controller: controller),
-          ),
+          child: WebViewWidget(controller: controller),
         ),
       ),
     );

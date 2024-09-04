@@ -1,6 +1,7 @@
 import 'package:dudung_first/screen/home_screen.dart';
 import 'package:dudung_first/screen/inappwebview_screen.dart';
 import 'package:dudung_first/screen/test_screen.dart';
+import 'package:dudung_first/screen/webview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
@@ -50,22 +51,10 @@ void main() async {
   // );
 
   runApp(
-    RefreshConfiguration(
-      footerTriggerDistance: 15,
-      dragSpeedRatio: 0.91,
-      headerBuilder: () => MaterialClassicHeader(),
-      footerBuilder: () => ClassicFooter(),
-      enableLoadingWhenNoData: false,
-      enableRefreshVibrate: false,
-      enableLoadMoreVibrate: false,
-      shouldFooterFollowWhenNotFull: (state) {
-        // If you want load more with noMoreData state ,may be you should return false
-        return false;
-      },
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: HomeScreen(),
-      ),
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+    //  home: HomeScreen(),
+      home: MyWebViewWidget( initialUrl: 'https://dudunglink.com',),
     ),
   );
 }
