@@ -7,25 +7,22 @@ import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter/services.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 //key password : havefun
 void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-
-
 
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
 
-
-
   await Future.delayed(const Duration(milliseconds: 500));
   FlutterNativeSplash.remove();
 
   if (defaultTargetPlatform == TargetPlatform.android) {
-    await AndroidInAppWebViewController.setWebContentsDebuggingEnabled(true);
+    //await AndroidInAppWebViewController.setWebContentsDebuggingEnabled(true);
     await Permission.camera.request();
     await Permission.photos.request();
   } else if (defaultTargetPlatform == TargetPlatform.iOS) {
@@ -33,7 +30,6 @@ void main() async {
     await Permission.camera.request();
     await Permission.microphone.request();
   }
-
 
   // Future.delayed(const Duration(seconds: 5), () {
   //   SystemChrome.setEnabledSystemUIMode(
@@ -54,14 +50,25 @@ void main() async {
   // );
 
   runApp(
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: InAppWebViewScreen(),
+    RefreshConfiguration(
+      footerTriggerDistance: 15,
+      dragSpeedRatio: 0.91,
+      headerBuilder: () => MaterialClassicHeader(),
+      footerBuilder: () => ClassicFooter(),
+      enableLoadingWhenNoData: false,
+      enableRefreshVibrate: false,
+      enableLoadMoreVibrate: false,
+      shouldFooterFollowWhenNotFull: (state) {
+        // If you want load more with noMoreData state ,may be you should return false
+        return false;
+      },
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: HomeScreen(),
+      ),
     ),
   );
 }
-
-
 
 /*
 * iOS 빌드 캐시 삭제

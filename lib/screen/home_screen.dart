@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,6 +15,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   var safeAreaColor = Colors.white;
   var loadUrl = 'https://dudunglink.com';
+
+  RefreshController _refreshController = RefreshController(initialRefresh: false);
 
   //https://dudunglink.com/s/link
 
@@ -110,10 +113,6 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
 
-    // return Scaffold(
-    //   body: SafeArea(child: WebViewWidget(controller: controller, )),
-    // );
-
     return PopScope(
       onPopInvoked: (bi) {
         controller.goBack();
@@ -124,51 +123,22 @@ class _HomeScreenState extends State<HomeScreen> {
         extendBodyBehindAppBar: true,
         appBar: null,
         body: SafeArea(
-          child: WebViewWidget(
-            controller: controller,
-            gestureRecognizers: Set()
-              ..add(Factory<VerticalDragGestureRecognizer>(() => VerticalDragGestureRecognizer()
-                ..onDown = (DragDownDetails dragDownDetails) {
-                  debugPrint('Raised OnDown...');
-                  controller.getScrollPosition().then((value) {
-                    if (value.dy == 0 && dragDownDetails.globalPosition.direction < 1) {
-                      //controller.reload();
-                    }
-                  });
-                })),
+          child: SmartRefresher(
+            enablePullDown: true,
+            enablePullUp: false,
+            controller: _refreshController,
+            header:  WaterDropHeader(),
+            onRefresh: () {
+              controller.reload();
+              _refreshController.refreshCompleted();
+            },
+            onLoading: (){
+              _refreshController.loadComplete();
+            },
+            child: WebViewWidget(controller: controller),
           ),
         ),
       ),
     );
-
-    // return PopScope(
-    //   onPopInvoked: (bi) {
-    //     controller.goBack();
-    //     debugPrint('go back');
-    //   },
-    //   child: Scaffold(
-    //     //backgroundColor: Colors.transparent,
-    //     extendBodyBehindAppBar: true,
-    //     appBar: null,
-    //     body: SafeArea(
-    //       child: WebViewWidget(
-    //         controller: controller,
-    //       ),
-    //     ),
-    //   ),
-    // );
-
-    // return Scaffold(
-    //   body: SafeArea(child: WebViewWidget(controller: controller, )),
-    // );
   }
-
-  // launchUrl(String url) async {
-  //   final Uri url0 = Uri.parse(url);
-  //   if (await canLaunchUrl(url0)) {
-  //     await launchUrl(url);
-  //   } else {
-  //     throw 'Could not launch $url0';
-  //   }
-  // }
 }
