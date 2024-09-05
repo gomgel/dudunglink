@@ -1,5 +1,6 @@
 import 'package:dudung_first/screen/home_screen.dart';
 import 'package:dudung_first/screen/inappwebview_screen.dart';
+import 'package:dudung_first/screen/inappwebview_test_screen.dart';
 import 'package:dudung_first/screen/my_webview.dart';
 import 'package:dudung_first/screen/test_screen.dart';
 import 'package:dudung_first/screen/webview.dart';
@@ -51,7 +52,7 @@ void main() async {
     //  home: HomeScreen(),
       //home: MyWebViewWidget( initialUrl: 'https://dudunglink.com',),
       //home: MyWebWiew(),
-      home: InAppWebViewScreen(),
+      home: InAppWebViewExampleScreen(),
     ),
   );
 }
