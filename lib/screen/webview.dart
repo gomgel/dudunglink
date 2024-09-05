@@ -31,6 +31,7 @@ class _MyWebViewWidgetState extends State<MyWebViewWidget> with WidgetsBindingOb
     dragGesturePullToRefresh = DragGesturePullToRefresh(3000, 0); // Here
     _controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..enableZoom(true)
       ..setNavigationDelegate(
         NavigationDelegate(
           onNavigationRequest: (NavigationRequest request){
@@ -64,8 +65,8 @@ class _MyWebViewWidgetState extends State<MyWebViewWidget> with WidgetsBindingOb
 
     dragGesturePullToRefresh // Here
         .setController(_controller)
-        .setDragHeightEnd(1000)
-        .setDragStartYDiff(500)
+        .setDragHeightEnd(200)
+        .setDragStartYDiff(10)
         .setWaitToRestart(3000);
 
     WidgetsBinding.instance.addObserver(this);
@@ -90,27 +91,29 @@ class _MyWebViewWidgetState extends State<MyWebViewWidget> with WidgetsBindingOb
 
   @override
   Widget build(context) {
-     return SafeArea(
-        child: RefreshIndicator(
-          //displacement: 250,
-          //backgroundColor: Colors.yellow,
-          //color: Colors.red,
-          //strokeWidth: 3,
-          triggerMode: RefreshIndicatorTriggerMode.onEdge,
-          onRefresh: dragGesturePullToRefresh.refresh, // Here
-          child: Builder(
-            builder: (context) {
-              // IMPORTANT: Use the RefreshIndicator context!
-              dragGesturePullToRefresh.setContext(context); // Here
-
-              return WebViewWidget(
-                controller: _controller,
-                gestureRecognizers: {Factory(() => dragGesturePullToRefresh)}, // HERE
-              );
-            },
+     return Scaffold(
+       body: SafeArea(
+          child: RefreshIndicator(
+            //displacement: 250,
+            //backgroundColor: Colors.yellow,
+            //color: Colors.red,
+            //strokeWidth: 3,
+            triggerMode: RefreshIndicatorTriggerMode.onEdge,
+            onRefresh: dragGesturePullToRefresh.refresh, // Here
+            child: Builder(
+              builder: (context) {
+                // IMPORTANT: Use the RefreshIndicator context!
+                dragGesturePullToRefresh.setContext(context); // Here
+       
+                return WebViewWidget(
+                  controller: _controller,
+                  gestureRecognizers: {Factory(() => dragGesturePullToRefresh)}, // HERE
+                );
+              },
+            ),
           ),
         ),
-      );
+     );
   }
 }
 
