@@ -28,7 +28,7 @@ class _MyWebViewWidgetState extends State<MyWebViewWidget> with WidgetsBindingOb
   void initState() {
     super.initState();
 
-    dragGesturePullToRefresh = DragGesturePullToRefresh(3000, 100); // Here
+    dragGesturePullToRefresh = DragGesturePullToRefresh(3000, 0); // Here
     _controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setNavigationDelegate(
@@ -64,8 +64,8 @@ class _MyWebViewWidgetState extends State<MyWebViewWidget> with WidgetsBindingOb
 
     dragGesturePullToRefresh // Here
         .setController(_controller)
-        .setDragHeightEnd(200)
-        .setDragStartYDiff(0)
+        .setDragHeightEnd(1000)
+        .setDragStartYDiff(500)
         .setWaitToRestart(3000);
 
     WidgetsBinding.instance.addObserver(this);
@@ -90,8 +90,7 @@ class _MyWebViewWidgetState extends State<MyWebViewWidget> with WidgetsBindingOb
 
   @override
   Widget build(context) {
-    return Scaffold(
-      body: SafeArea(
+     return SafeArea(
         child: RefreshIndicator(
           //displacement: 250,
           //backgroundColor: Colors.yellow,
@@ -104,19 +103,14 @@ class _MyWebViewWidgetState extends State<MyWebViewWidget> with WidgetsBindingOb
               // IMPORTANT: Use the RefreshIndicator context!
               dragGesturePullToRefresh.setContext(context); // Here
 
-              var verticalGestures = Factory<VerticalDragGestureRecognizer>(() => dragGesturePullToRefresh);
-              var gestureSet = {verticalGestures};
-
               return WebViewWidget(
                 controller: _controller,
-                //gestureRecognizers: gestureSet,
                 gestureRecognizers: {Factory(() => dragGesturePullToRefresh)}, // HERE
               );
             },
           ),
         ),
-      ),
-    );
+      );
   }
 }
 
