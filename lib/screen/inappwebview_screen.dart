@@ -222,7 +222,6 @@ class _InAppWebViewScreenState extends State<InAppWebViewScreen>  {
                       transparentBackground: true,
                     ),
                     android: AndroidInAppWebViewOptions(
-
                         useHybridComposition: true,
                         allowContentAccess: true,
                         builtInZoomControls: true,

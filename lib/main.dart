@@ -1,5 +1,6 @@
 import 'package:dudung_first/screen/home_screen.dart';
 import 'package:dudung_first/screen/inappwebview_screen.dart';
+import 'package:dudung_first/screen/my_webview.dart';
 import 'package:dudung_first/screen/test_screen.dart';
 import 'package:dudung_first/screen/webview.dart';
 import 'package:flutter/foundation.dart';
@@ -12,7 +13,9 @@ import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 //key password : havefun
 void main() async {
-  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
+  await Permission.camera.request();
+  await Permission.photos.request();
 
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
@@ -22,15 +25,7 @@ void main() async {
   await Future.delayed(const Duration(milliseconds: 500));
   FlutterNativeSplash.remove();
 
-  if (defaultTargetPlatform == TargetPlatform.android) {
-    //await AndroidInAppWebViewController.setWebContentsDebuggingEnabled(true);
-    await Permission.camera.request();
-    await Permission.photos.request();
-  } else if (defaultTargetPlatform == TargetPlatform.iOS) {
-    await Permission.photos.request();
-    await Permission.camera.request();
-    await Permission.microphone.request();
-  }
+
 
   // Future.delayed(const Duration(seconds: 5), () {
   //   SystemChrome.setEnabledSystemUIMode(
@@ -54,7 +49,9 @@ void main() async {
     MaterialApp(
       debugShowCheckedModeBanner: false,
     //  home: HomeScreen(),
-      home: MyWebViewWidget( initialUrl: 'https://dudunglink.com',),
+      //home: MyWebViewWidget( initialUrl: 'https://dudunglink.com',),
+      //home: MyWebWiew(),
+      home: InAppWebViewScreen(),
     ),
   );
 }

@@ -28,7 +28,7 @@ class _MyWebViewWidgetState extends State<MyWebViewWidget> with WidgetsBindingOb
   void initState() {
     super.initState();
 
-    dragGesturePullToRefresh = DragGesturePullToRefresh(3000, 0); // Here
+    dragGesturePullToRefresh = DragGesturePullToRefresh(); // Here
     _controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..enableZoom(true)
