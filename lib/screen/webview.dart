@@ -65,7 +65,7 @@ class _MyWebViewWidgetState extends State<MyWebViewWidget> with WidgetsBindingOb
     dragGesturePullToRefresh // Here
         .setController(_controller)
         .setDragHeightEnd(200)
-        .setDragStartYDiff(1)
+        .setDragStartYDiff(0)
         .setWaitToRestart(3000);
 
     WidgetsBinding.instance.addObserver(this);
@@ -109,8 +109,8 @@ class _MyWebViewWidgetState extends State<MyWebViewWidget> with WidgetsBindingOb
 
               return WebViewWidget(
                 controller: _controller,
-                gestureRecognizers: gestureSet,
-                //gestureRecognizers: {Factory(() => dragGesturePullToRefresh)}, // HERE
+                //gestureRecognizers: gestureSet,
+                gestureRecognizers: {Factory(() => dragGesturePullToRefresh)}, // HERE
               );
             },
           ),
