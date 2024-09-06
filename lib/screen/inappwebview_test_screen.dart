@@ -1,17 +1,23 @@
 import 'dart:collection';
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class InAppWebViewExampleScreen extends StatefulWidget {
+
+  const InAppWebViewExampleScreen({Key? key}) : super(key: key);
+
   @override
-  _InAppWebViewExampleScreenState createState() => new _InAppWebViewExampleScreenState();
+  State<InAppWebViewExampleScreen> createState() => _InAppWebViewExampleScreenState();
 }
 
 class _InAppWebViewExampleScreenState extends State<InAppWebViewExampleScreen> {
   final GlobalKey webViewKey = GlobalKey();
+
+  var safeAreaColor = Colors.white;
 
   InAppWebViewController? webViewController;
   InAppWebViewGroupOptions options = InAppWebViewGroupOptions(
@@ -70,8 +76,8 @@ class _InAppWebViewExampleScreenState extends State<InAppWebViewExampleScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //appBar: AppBar(title: Text("InAppWebView")),
-      //drawer: myDrawer(context: context),
+      backgroundColor: safeAreaColor,
+      resizeToAvoidBottomInset: defaultTargetPlatform == TargetPlatform.android ? true : false,
       body: SafeArea(
         child: Column(
           children: <Widget>[
@@ -131,9 +137,23 @@ class _InAppWebViewExampleScreenState extends State<InAppWebViewExampleScreen> {
                       });
                     },
                     onUpdateVisitedHistory: (controller, url, androidIsReload) {
+                      if (url!.toString().contains('https://dudunglink.com/s/link')) {
+                        if (this.safeAreaColor == Colors.black87) {
+                        } else {
+                          this.safeAreaColor = Colors.black87;
+                        }
+                      } else {
+
+                        if (this.safeAreaColor == Colors.white) {
+                        } else {
+                          this.safeAreaColor = Colors.white;
+                        }
+                      }
+
                       setState(() {
                         this.url = url.toString();
                       });
+
                     },
                     onConsoleMessage: (controller, consoleMessage) {
                       print(consoleMessage);
