@@ -7,7 +7,6 @@ import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class InAppWebViewExampleScreen extends StatefulWidget {
-
   const InAppWebViewExampleScreen({Key? key}) : super(key: key);
 
   @override
@@ -56,13 +55,34 @@ class _InAppWebViewExampleScreenState extends State<InAppWebViewExampleScreen> {
 
     pullToRefreshController = PullToRefreshController(
       options: PullToRefreshOptions(
-        color: Colors.blue,
+        color: Colors.grey.withOpacity(.5),
       ),
       onRefresh: () async {
         if (Platform.isAndroid) {
           webViewController?.reload();
         } else if (Platform.isIOS) {
-          webViewController?.loadUrl(urlRequest: URLRequest(url: await webViewController?.getUrl()));
+
+          final refreshUrl = await webViewController?.getUrl();
+
+          setState(
+            () {
+              webViewController?.scrollTo(x: 0, y: 0);
+
+              webViewController
+                  ?.loadUrl(
+                    urlRequest: URLRequest(
+                      url: Uri.parse('about:blank'),
+                    ),
+                  )
+                  .then(
+                    (value) => webViewController?.loadUrl(
+                      urlRequest: URLRequest(url: refreshUrl),
+                    ),
+                  );
+            },
+          );
+
+          //webViewController?.loadUrl(urlRequest: URLRequest(url: await webViewController?.getUrl()));
         }
       },
     );
@@ -143,7 +163,6 @@ class _InAppWebViewExampleScreenState extends State<InAppWebViewExampleScreen> {
                           this.safeAreaColor = Colors.black87;
                         }
                       } else {
-
                         if (this.safeAreaColor == Colors.white) {
                         } else {
                           this.safeAreaColor = Colors.white;
@@ -153,7 +172,6 @@ class _InAppWebViewExampleScreenState extends State<InAppWebViewExampleScreen> {
                       setState(() {
                         this.url = url.toString();
                       });
-
                     },
                     onConsoleMessage: (controller, consoleMessage) {
                       print(consoleMessage);
