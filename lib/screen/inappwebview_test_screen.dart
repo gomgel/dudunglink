@@ -99,12 +99,14 @@ class _InAppWebViewExampleScreenState extends State<InAppWebViewExampleScreen> {
       backgroundColor: safeAreaColor,
       resizeToAvoidBottomInset: defaultTargetPlatform == TargetPlatform.android ? true : false,
       body: SafeArea(
+        maintainBottomViewPadding: true,
         child: Column(
           children: <Widget>[
             Expanded(
               child: Stack(
                 children: [
                   InAppWebView(
+
                     key: webViewKey,
                     // contextMenu: contextMenu,
                     initialUrlRequest: URLRequest(url: Uri.parse("https://dudunglink.com")),
